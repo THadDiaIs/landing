@@ -18,6 +18,9 @@ p{
   padding: 1rem;
   font-size: 1.3rem;
 }
+h2 {
+  text-align: center;
+}
 h3 {
   font-weight: bold;
 }
@@ -31,17 +34,22 @@ section{
 header {
   background-color: var(--secColor);
   color: var(--mainColor);
+  padding: 0 7px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.content {
+  width: 80%;
   display: grid;
   grid-template-columns: 1fr 4fr;
   align-items: center;
-  width: 100%;
+  justify-content: space-around;
   overflow: hidden;
-  padding: 0 7px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  z-index: 1000;
 }
 #header-img {
   width: 50%;
@@ -50,14 +58,34 @@ header ul {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-self: end;
+  margin: 0;
+  align-self: flex-end;
 }
-header a {
+.nav-item, .nav-link {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link {
   color: var(--mainColor);
 }
-
+.nav-link:hover {
+  background-color: var(--acntColor);
+  color: var(--mainColor);
+}
 main{
   margin-top: 7rem;
+}
+#presentation, #advantages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  height: 70vh;
 }
 #advantages {
   background-image: url('https://images2.imgbox.com/38/8e/xvfXaMl9_o.jpg');
@@ -75,8 +103,8 @@ main{
 #presentation .presentation {
   text-align: center;
   font-weight: bold;
-  font-size: 40px;
-  margin: auto;
+  font-size: 2em;
+  margin: 2em;
 }
 #presentation .presentation,#presentation .p {
   padding: 3rem;
@@ -97,15 +125,14 @@ main{
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 2rem;
 }
 .card{
   border-radius: 0 1rem 0 1rem;
   border: 2px solid var(--secColor);
   background-color: var(--secColor);
   color: var(--mainColor);
-  padding: 1rem;
-  font-size: 0.9rem;
+  padding: 2rem;
 }
 #Booking{
   padding: 0.5rem;
